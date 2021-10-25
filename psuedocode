@@ -1,0 +1,38 @@
+Goal: Player enters a bet amount and guess, then spins the wheel. If guess matches outcome, then they win their bet, else they lose their bet.
+
+--------------------------------------------------------------------------------------------
+
+Mechanisms:
+Bet: a button with increase/decrease increments of 10
+Guess: a dropdown option input
+Spin: a button
+Outcome: either a win or lose presented by an integer (-bet or +bet)
+
+--------------------------------------------------------------------------------------------
+
+Database:
+game = [bet, guess, outcome]
+
+--------------------------------------------------------------------------------------------
+
+POST:
+After each spin request save game = [bet, guess] to database
+
+PUT:
+After each spin reply update game to game = [bet, guess, OUTCOME]
+
+GET:
+Game display with bet, guess, spin, and space for outcome
+Login dispay for Admin
+
+DELETE:
+
+--------------------------------------------------------------------------------------------
+
+Steps:
+Generate game page
+User chooses bet and guess
+User spins (POST)
+Outcome is randomly generated (red or black and 1-36)
+If guess is either outcomes color or number they win their bet amount, else they lose their bet amount
+Display win or loss amount to them overall

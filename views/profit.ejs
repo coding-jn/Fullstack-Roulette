@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+<head>
+    <title>Roulette Machine</title>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div>
+        <% let total = 0; %>
+        <% for(var i=0; i <plays.length; i++) {%>
+            <% total+= parseFloat(plays[i].total) %>
+        <% } %>
+        <h1 id='total'>Total: <%= total %></h1>
+
+    <footer>
+        <a href="/logout" class="btn btn-default btn-sm">Logout</a>
+    </footer>
+</body>
+</html>
